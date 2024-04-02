@@ -1,0 +1,22 @@
+#The reason for having this file is the server knows the structure of the data
+schema {
+    query: Query
+}
+
+type Query {
+    stocks:[StocksMapper]
+}
+
+#The type StockMapper is the superset object that our Application returns.
+type StocksMapper {
+    ticker: String
+    stockValue: String
+    volume: String
+    averageVolume: String
+    PE_Ratio: String
+    EPS: String
+    dividend: String
+    marketCap: String
+    previousOpen: String
+    previousClose: String
+}
